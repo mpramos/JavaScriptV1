@@ -46,3 +46,6 @@ console.log(persona2.puntaje)
 console.log(persona1.skills)
 console.log(persona2.skills)
 
+
+console.log("maria")
+
