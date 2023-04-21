@@ -48,4 +48,5 @@ console.log(persona2.skills)
 
 
 console.log("maria")
+console.log("paola")
 
