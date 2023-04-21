@@ -11,7 +11,15 @@ class Persona{
            const fullName= this.nombre + ' ' + this.apellido
            return fullName 
         }
-    
+        get ObtenerNombre(){
+           return this.nombre 
+        }
+        get ObtenerApellido(){
+            return this.apellido
+        }
+        get ObtenerPais(){
+            return this.pais
+        }
         get obtenerPuntaje(){
             return this.puntaje
         }
@@ -54,5 +62,14 @@ console.log(persona2.skills)
 
 console.log(persona1.getPersonaInfo())
 
+
+class Estudiante extends Persona{
+        decirAlgo(){
+            console.log('Hola soy un estudiante')
+        }
+}
+const estudiante=new Estudiante('Lorena','Chavez','Bolivia')
+console.log(estudiante)
+estudiante.decirAlgo()
 
 
