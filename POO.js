@@ -38,7 +38,7 @@ class Persona{
             return info
         }
 
-}
+} 
 const persona1= new Persona()
 const persona2= new Persona('Gustavo','Iriarte','Argentina')
 const persona3= new Persona('Cecilia','Gutierrez','Brasil')

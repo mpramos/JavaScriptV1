@@ -14,7 +14,7 @@ const str1= 'love JavaScript love '
 const patron2=/love/
 const resultado= str1.match(patron2)
 console.log(resultado)
-const str2= ' JavaScript  '
+const str2= ' JavaScript '
 const patron3=/love/
 const resultado2= str2.search(patron3)
 console.log(resultado2);

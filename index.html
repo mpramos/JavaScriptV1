@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- h1 etiqueta -->
+    <h1 class="titulo"> Primer Titulo</h1>
+    <h1 class="titulo"> Primer Titulo</h1>
+    <h1 class="titulo"> Primer Titulo</h1>
+    <h1 class="titulo"> Primer Titulo</h1>
+    <h1 class="titulo1"> Primer Titulo</h1>
+    <h1></h1>
+    <h1></h1>
+    <h1></h1>
+    <h2 id="subtitulo">Subtitulo</h2>
+    <!-- p ETIQUETA--> 
+    <p></p> 
+    <!-- <button></button> ETIQUETA -->
+    <button></button>
+    <script>
+            const allTitles=document.getElementsByTagName('h1')
+            console.log(allTitles); //Lista
+            console.log(allTitles.length) 
+            const subtitulo= document.getElementsByClassName('titulo')
+            console.log(subtitulo);
+            let primeraVariable= document.querySelector('h1')//
+            let  todasEtiquetas= document.querySelectorAll('h1')//
+            console.log('coleccion de las etiquetas');
+            for (let i = 0; i <todasEtiquetas.length ; i++) {
+                console.log(todasEtiquetas[i])
+            }
+            let segundaVariable= document.querySelector('#subtitulo')
+            let terceraVariable= document.querySelector('.titulo')
+            console.log(segundaVariable);
+            console.log(terceraVariable);
+            let titulos=document.querySelectorAll('h1')
+            titulos[5].className='titulo' //
+            titulos[5].id='quintoElemento'
+            let titulosAttribute=document.querySelectorAll('h1')
+            titulosAttribute[6].setAttribute('class','titulo')//
+            titulosAttribute[6].setAttribute('id','sextoElemento')//
+//TODO
+            let tituloClase=document.querySelectorAll('h1')
+            tituloClase[6].classList.add('clase1','clase2')
+            tituloClase[6].textContent="Cuarto Titulo"
+
+
+
+
+    </script>
+</body>
+</html>

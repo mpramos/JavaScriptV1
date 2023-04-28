@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- <form action="" method="post">
+        <label id="">Ingrese el nombre</label>
+        <input type="number" name="" id="" required placeholder="Escribir Nombre">
+        <input type="date" name="" id="" >
+        <input type="text" name="" id="" required>
+        <input type="email" name="" id=""  required>
+        <input type="submit" value="">
+
+    </form> -->
+    <button onclick="crearFomulario()">CrearFomulario</button>
+    <script>
+        function crearFomulario() {
+            let formulario = document.createElement("form")
+            formulario.setAttribute("method", "post")
+            formulario.setAttribute("action", "https://formspree.io/f/myyalren")
+            //CAMPO DE TEXTO PARA EL NOMBRE
+            let campoTexto = document.createElement("input")
+            campoTexto.setAttribute("type", "text")
+            campoTexto.setAttribute("placeholder", "Nombre completo")
+            //CAMPO DE TEXTO PARA EL CORREO
+            let campoEmail = document.createElement("input")
+            campoEmail.setAttribute("type", "email")
+            campoEmail.setAttribute("placeholder", "Correo Electronico")
+            //Creacion del boton de enviar
+            let botonEnviar = document.createElement("input")
+            botonEnviar.setAttribute("type", "submit")
+            botonEnviar.setAttribute("value", "Enviar")
+
+            formulario.appendChild(campoTexto)
+            formulario.appendChild(campoEmail)
+            formulario.appendChild(botonEnviar)
+
+            document.body.appendChild(formulario)
+
+        }
+    </script>
+</body>
+
+</html>
