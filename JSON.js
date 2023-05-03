@@ -22,3 +22,8 @@ const usuariosText=`{
     }`
 const usuarioObjeto= JSON.parse(usuariosText)
 console.log(usuarioObjeto);
+console.log(typeof usuarioObjeto);
+let cadenaUsuario= JSON.stringify(usuarioObjeto)
+console.log(cadenaUsuario);
+console.log(typeof cadenaUsuario);
+
