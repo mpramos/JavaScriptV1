@@ -107,6 +107,104 @@ async function verPaises() {
 }
 verPaises()
 
+//! REPASANDO MAPS
+//? Ejercicio 1
+const numeros=[1,2,3,4,5]
+const cuadradoNumeros= numeros.map(numero=>numero*numero)
+console.log(cuadradoNumeros);
+//? Ejercicio 2
+const user=[
+    {name: 'Martha', age: 25},
+    {name: 'Juana', age: 30},
+    {name: 'Bob', age: 35},
+]
+const userNames= user.map(user=> user.name)
+console.log(userNames);
+//? Ejercicio 3
+
+const cadenas=['Hola','Mundo','en ','Javascript']
+// [{string: 'Hola',length:4},{string: 'Mundo',length:5},...]
+const cadenaObjeto= cadenas.map(string=> ({cadena:string,tamaño:string.length}))
+console.log(cadenaObjeto);
+
+//! Repasando For Each
+const colores=['rojo','verde','azul']
+colores.forEach(color => console.log(color))
+
+const users=[
+    {name: 'Martha', age: 25},
+    {name: 'Juana', age: 30},
+    {name: 'Bob', age: 35},
+]
+console.log('antes',users);
+users.forEach(user=>{
+    if(user.name==='Juana'){
+        user.age=31
+    }
+})
+console.log('despues',users);
+
+//SORT
+const frutas=['naranja','manzana','pera','platano']
+const frutasOrdenadas= frutas.sort()
+console.log(frutasOrdenadas);
+ const numbers=[5,1,3,2,4]
+ const numbersOrdenados= numbers.sort((a,b)=> a-b)
+//  const numbersOrdenados= numbers.sort((a,b)=> b-a)
+ console.log(numbersOrdenados);
+const users=[
+    {name: 'Martha', age: 25},
+    {name: 'Juana', age: 30},
+    {name: 'Bob', age: 35},
+]
+const sortedUsers= users.sort((a,b)=> b.age-a.age)
+console.log(sortedUsers);
+
+const fetchData= async ()=>{
+    try {
+        const respuesta= await fetch('https://restcountries.com/v3.1/all')
+        const respuestaJSON= await respuesta.json()
+        console.log(respuestaJSON);
+    } catch (error) {
+        console.error(err);
+    }
+}
+fetchData()
+
+
+
+const url='https://rickandmortyapi.com/api/character'
+
+const getCharacterNames=()=>{
+    return new Promise((resolve,reject)=>{
+        fetch(url)
+            .then(respuesta=>respuesta.json())
+            .then(data=>{
+                const names=data.results.map(character=>character.name)
+                resolve(names)
+            })
+            .catch(error=>reject(error))
+    })
+}
+getCharacterNames()
+.then(names=>console.log(names))
+.catch(error=>console.log(error))
+
+async function miFuncion() {
+    await new Promise(resolve=>setTimeout(resolve,2000))
+    console.log("La espera de 2 segundos ha terminado");
+}
+miFuncion()
+
+
+
+
+
+
+
+
+
+
 
     
     

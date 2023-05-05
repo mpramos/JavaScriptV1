@@ -1,0 +1,27 @@
+body{
+    font-family: sans-serif;
+    text-align: center;
+}
+h1{
+    margin-top: 50px;
+}
+#character-list{
+    display: flex;
+    flex-wrap: wrap;
+    list-style:none;
+    padding: 0;
+}
+.character{
+    margin: 10px;
+    border:1px solid #ccc;
+    border-radius: 5px;
+    width:200px;
+    text-align: center;
+}
+.character img{
+    max-width: 100%;
+    height: auto;
+}
+.character h2{
+    margin: 10px;
+}

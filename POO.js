@@ -1,5 +1,6 @@
 //syntax
 class Persona{
+
         constructor(nombre="Susana",apellido="Ramos",pais="Argentina"){
         this.nombre=nombre;
         this.apellido=apellido;
