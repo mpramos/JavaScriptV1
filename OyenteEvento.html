@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Eventos de keys : Presiona cualquier tecla</h1>
+    <button id="click"> Hazme CLick</button>
+    <button id="dobleclick"> Hazme doble Click</button>
+    <button id="mouseEnter"> Hazme mouseEnter</button>
+    <input id="input1" type="text" placeholder="diga alguna cosa">
+    <p id="parrafo1"></p>
+    <input id="input2" type="text" placeholder="diga alguna cosa">
+    <p id="parrafo2"></p>
+    <script>
+        const btn = document.querySelector('#click')
+        btn.addEventListener('click', e=>{
+            console.log('e evento esta siendo escuchado: ',e);
+            console.log('e target ',e.target);
+            console.log('e.target Content',e.target.textContent);
+        })
+        const button= document.querySelector('#dobleclick')
+        button.addEventListener('dblclick', e=>{
+            console.log('e evento esta siendo escuchado: ',e);
+            console.log('e target ',e.target);
+            console.log('e.target Content',e.target.textContent);
+
+        })
+        const mouseEnter= document.querySelector('#mouseEnter')
+        mouseEnter.addEventListener('mouseenter', e=>{
+            console.log('e evento esta siendo escuchado: ',e);
+            console.log('e target ',e.target);
+            console.log('e.target Content',e.target.textContent);})
+        const input=document.querySelector('#input1')   
+        const p1=document.querySelector('#parrafo1')
+        input.addEventListener('input', e=>{
+            p1.textContent=e.target.value;
+        })
+        const input2=document.querySelector('#input2')
+        const p2=document.querySelector('#parrafo2')
+        input2.addEventListener('blur',e=>{
+            p2.textContent='El campo es requerido';
+            p2.style.color='red'
+        })
+        document.body.addEventListener('keypress', e=>{
+            alert(e.keyCode)
+        })
+    </script>
+</body>
+</html>
